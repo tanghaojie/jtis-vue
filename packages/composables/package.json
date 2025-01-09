@@ -5,21 +5,25 @@
   "files": [
     "dist"
   ],
-  "module": "./dist/composables.js",
-  "main": "./dist/composables.umd.cjs",
+  "module": "./dist/vue-composables.js",
+  "main": "./dist/vue-composables.umd.cjs",
   "exports": {
     ".": {
-      "import": "./dist/composables.js",
-      "require": "./dist/composables.umd.cjs"
+      "import": "./dist/vue-composables.js",
+      "require": "./dist/vue-composables.umd.cjs"
     }
   },
   "types": "./dist/types/index.d.ts",
   "license": "MIT",
   "author": "Jackie Tang",
   "repository": "https://github.com/tanghaojie/jtis-vue",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "vite build && vue-tsc src/index.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "publishToNpm": "npm version patch && npm publish"
+    "publishToNpm": "npm version patch && npm publish",
+    "local-dev-test": "vite -c ./local-dev-test/vite.config.ts --host"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",

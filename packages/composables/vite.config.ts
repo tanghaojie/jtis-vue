@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'composables',
+      name: 'vue-composables',
     },
     rollupOptions: {
       external: ['vue'],
