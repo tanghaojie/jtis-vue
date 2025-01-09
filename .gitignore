@@ -28,3 +28,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Vue icons generative components
+packages/icons/src/icons/src/components/**
