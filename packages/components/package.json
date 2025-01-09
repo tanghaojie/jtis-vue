@@ -1,0 +1,50 @@
+{
+  "name": "@jtis/vue-components",
+  "type": "module",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/vue-components.js",
+  "main": "./dist/vue-components.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-components.js",
+      "require": "./dist/vue-components.umd.cjs"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css",
+      "default": "./dist/style.css"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "license": "MIT",
+  "author": "Jackie Tang",
+  "repository": "https://github.com/tanghaojie/jtis-vue",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc src/index.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "publishToNpm": "npm version patch && npm publish",
+    "local-dev-test": "vite -c ./local-dev-test/vite.config.ts --host"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "npm-run-all2": "^7.0.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.83.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "@jtis/browser": "^0.0.4",
+    "@jtis/optimize": "^0.0.3",
+    "@jtis/vue-composables": "^0.0.1",
+    "resize-detector": "^0.3.0",
+    "vue": "^3.5.13"
+  }
+}
