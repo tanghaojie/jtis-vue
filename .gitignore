@@ -30,4 +30,4 @@ coverage
 *.tsbuildinfo
 
 # Vue icons generative components
-packages/icons/src/icons/src/components/**
+/packages/icons/src/icons/src/components/**
