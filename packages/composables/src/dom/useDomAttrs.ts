@@ -1,11 +1,11 @@
-import { computed } from 'vue'
+import { computed, CSSProperties } from 'vue'
 
 export function useDomAttrs(attrs: any, defaultClassname?: string) {
-  const classObj = computed(() => {
+  const classObj = computed<string>(() => {
     return attrs.class ? `${defaultClassname || ''} ` + attrs.class : defaultClassname || ''
   })
 
-  const styleObj = computed(() => {
+  const styleObj = computed<CSSProperties>(() => {
     return attrs.style ? attrs.style : {}
   })
 
