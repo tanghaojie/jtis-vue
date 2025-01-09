@@ -1,0 +1,54 @@
+{
+  "name": "@jtis/vue-icons",
+  "type": "module",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/vue-icons.js",
+  "main": "./dist/vue-icons.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-icons.js",
+      "require": "./dist/vue-icons.umd.cjs"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css",
+      "default": "./dist/style.css"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "license": "MIT",
+  "author": "Jackie Tang",
+  "repository": "https://github.com/tanghaojie/jtis-vue",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc src/index.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "publishToNpm": "npm version patch && npm publish",
+    "local-dev-test": "vite -c ./local-dev-test/vite.config.ts --host",
+    "icons:clean": "tsx ./src/icons/build/clean.ts",
+    "icons:generate": "npm run icons:clean && tsx ./src/icons/build/generate.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "camelcase": "^8.0.0",
+    "fs-extra": "^11.2.0",
+    "npm-run-all2": "^7.0.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.83.1",
+    "tsx": "^4.19.2",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "@jtis/utils": "^0.0.2",
+    "@jtis/vue-components": "^0.0.1",
+    "vue": "^3.5.13"
+  }
+}

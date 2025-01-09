@@ -5,7 +5,7 @@ import { JtWordCloudTunnel } from './word-cloud-tunnel'
 
 const components = [JtAutoHeightWrapper, JtWordCloudTunnel]
 
-const install = function (vue: App) {
+function install(vue: App) {
   components.forEach((component) => {
     if (component.name) {
       vue.component(component.name, component)

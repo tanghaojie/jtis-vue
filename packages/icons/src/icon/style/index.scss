@@ -1,0 +1,17 @@
+.jt-icon {
+  --color: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  fill: currentColor;
+  transform: translateZ(0);
+  color: var(--color);
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}
