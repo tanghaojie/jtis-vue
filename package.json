@@ -1,0 +1,12 @@
+{
+  "name": "jtis",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "license": "MIT",
+  "author": "Jackie Tang",
+  "repository": "https://github.com/tanghaojie/jtis-utils",
+  "scripts": {
+    "build-all": "pnpm run -C packages/composables build ",
+    "publish-all": "pnpm run -C packages/composables publishToNpm "
+  }
+}
