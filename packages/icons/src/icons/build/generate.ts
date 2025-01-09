@@ -4,7 +4,7 @@ import camelcase from 'camelcase'
 import { pathComponents, pathSvgs, pathEntry } from './paths'
 import clean from './clean'
 
-const PREFIX = ''
+const PREFIX = 'JtIcon'
 
 function getSvgFiles() {
   return readdirSync(pathSvgs)

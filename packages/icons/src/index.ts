@@ -10,7 +10,7 @@ function install(vue: App) {
 //@ts-ignore
 typeof window !== 'undefined' && window.Vue && install(window.Vue)
 
-export default { install }
+export default { install: install }
 
 export { JtIcon }
 export * from './icons'
