@@ -152,10 +152,15 @@ export function useWordCloudTunnel(
     return style
   }
 
+  function clear() {
+    datas.splice(0, datas.length)
+  }
+
   return {
     containerEl,
     datas,
     append,
     itemStyle,
+    clear,
   }
 }

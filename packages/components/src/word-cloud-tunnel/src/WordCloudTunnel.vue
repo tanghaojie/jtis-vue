@@ -43,7 +43,7 @@ const {
   opacityStep,
 } = toRefs(props)
 
-const { containerEl, datas, append, itemStyle } = useWordCloudTunnel(
+const { containerEl, datas, append, itemStyle, clear } = useWordCloudTunnel(
   color,
   deeps,
   axisCount,
@@ -55,6 +55,7 @@ const { containerEl, datas, append, itemStyle } = useWordCloudTunnel(
 
 defineExpose({
   append,
+  clear,
 })
 </script>
 
